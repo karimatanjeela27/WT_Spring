@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Text Tool</title>
+</head>
+
+<body>
+
+<h2>Text Analysis Tool</h2>
+
+<textarea id="text" rows="5" cols="40"></textarea>
+<br><br>
+
+<button onclick="analyze()">Analyze</button>
+
+<p id="result"></p>
+
+<script>
+
+function analyze(){
+
+var t = document.getElementById("text").value;
+
+
+if(t == ""){
+alert("Enter text");
+return;
+}
+
+
+var charCount = t.length;
+
+
+var words = t.trim().split(" ");
+var wordCount = words.length;
+
+
+var rev = t.split("").reverse().join("");
+
+
+document.getElementById("result").innerHTML =
+"Characters: " + charCount + "<br>" +
+"Words: " + wordCount + "<br>" +
+"Reverse: " + rev;
+
+}
+
+</script>
+
+</body>
+</html>
